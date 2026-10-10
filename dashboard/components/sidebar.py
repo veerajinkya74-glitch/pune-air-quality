@@ -14,7 +14,7 @@ def render():
         st.write("**Live Demo** for Seamedu Awards 2026 – Data Analytics Excellence")
         st.caption("Data up to Dec 2024 | Forecast till 2026")
         st.divider()
-        st.write("👨‍💻 Built by Amarjit Jha")
+        st.write("👨‍💻 Built by Ajinkya Veer")
         st.write(
             "GitHub: [seamedu-air-quality-pune]"
             "(https://github.com/AmarjeetJha17/seamedu-air-quality-pune)"
