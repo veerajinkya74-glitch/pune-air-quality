@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import streamlit as st
 from src.data_loader import load_daily_aqi, load_hourly_pollutants
 from dashboard.components import (
+    animated,
     aqi_trend,
     seasonal,
     correlations,
@@ -182,7 +183,8 @@ def load_data():
 daily, hourly = load_data()
 
 # ====================== TABS ======================
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+tab0, tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+    "Animated Dashboard",
     "📈 AQI Trend",
     "📊 Seasonal Analysis",
     "🔥 Pollutant Correlations",
@@ -190,6 +192,9 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "⏰ Hourly PM2.5 vs PM10",
     "🔮 2025–2026 Forecast",
 ])
+
+with tab0:
+    animated.render()
 
 with tab1:
     aqi_trend.render(daily)
